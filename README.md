@@ -1,4 +1,115 @@
-# CombustionLab
+# CombustionLab (README en Español)
+
+**CombustionLab** es una herramienta de cálculo de combustión basada en Python diseñada para estimar la temperatura de llama adiabática de combustibles simples mediante combustión estequiométrica, exceso de aire y datos termodinámicos tabulados.
+
+El proyecto fue creado como una herramienta de aprendizaje e ingeniería para conectar la teoría de combustión con una implementación computacional en Python.
+
+---
+
+## Versión
+
+Versión actual: **V1 (Lanzamiento inicial - En desarrollo)**
+
+Esta es una versión temprana. El proyecto está en desarrollo activo y puede cambiar significativamente en futuras versiones.
+
+---
+
+## Características
+
+- Define propiedades básicas de combustibles como metano, propano e hidrógeno  
+- Calcula reacciones de combustión estequiométrica  
+- Permite definir exceso de aire y temperatura ambiente (configurado en el código)  
+- Lee datos termodinámicos desde un archivo Excel  
+- Estima la temperatura adiabática mediante un método iterativo numérico  
+- Estructura modular separando combustión, termodinámica y manejo de datos  
+
+---
+
+## Estructura del proyecto
+
+CombustionLab/
+│
+├── main.py
+├── fuels.py
+├── stoichiometry.py
+├── thermo_properties.py
+├── solver.py
+│
+└── data/
+    └── enthalpy_data.xlsx
+
+---
+
+## Cómo funciona
+
+1. Se selecciona un combustible del listado disponible  
+2. Se define el exceso de aire y la temperatura ambiente en el código  
+3. Se calculan reactivos y productos de combustión  
+4. Se cargan datos de entalpía desde Excel  
+5. Se resuelve la temperatura adiabática de forma iterativa  
+
+---
+
+## Uso
+
+Ejecutar el programa:
+
+```bash
+python main.py
+```
+
+---
+
+## Fundamento de ingeniería
+
+Para un combustible genérico CxHyOz:
+
+Requerimiento de oxígeno:
+
+O2,stoich = x + y/4 - z/2
+
+Productos principales:
+
+CO2, H2O, N2
+
+Supuestos del modelo:
+- Combustión completa  
+- Sin disociación química  
+- Sin pérdidas de calor  
+
+---
+
+## Limitaciones actuales
+
+- No incluye efectos de disociación  
+- Base de combustibles limitada  
+- No tiene interfaz de usuario  
+- Modelo simplificado de combustión  
+- No reporta oxígeno remanente explícitamente  
+
+---
+
+## Futuras mejoras
+
+- Añadir más combustibles  
+- Análisis de gases de combustión  
+- Interfaz tipo CLI (V2)  
+- Validación de entradas  
+- Herramientas de visualización  
+
+---
+
+## Licencia
+
+Este proyecto está publicado bajo licencia MIT para uso educativo e ingenieril.
+
+---
+
+## Autor
+
+Desarrollado por **André Ballarta Elguera**.
+
+# CombustionLab (README in English)
 
 **CombustionLab** is a Python-based combustion calculation tool designed to estimate the adiabatic flame temperature of simple fuels using stoichiometric combustion, excess air and tabulated thermodynamic data.
 
