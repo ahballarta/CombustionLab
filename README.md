@@ -10,7 +10,7 @@ El proyecto fue creado como una herramienta de aprendizaje e ingeniería para co
 
 Versión actual: **V1 (Lanzamiento inicial - En desarrollo)**
 
-Esta es una versión temprana. El proyecto está en desarrollo activo y puede cambiar significativamente en futuras versiones.
+Esta es una versión inicial. El proyecto está en desarrollo activo y puede cambiar significativamente en futuras versiones.
 
 ---
 
@@ -27,6 +27,7 @@ Esta es una versión temprana. El proyecto está en desarrollo activo y puede ca
 
 ## Estructura del proyecto
 
+```
 CombustionLab/
 │
 ├── main.py
@@ -37,6 +38,7 @@ CombustionLab/
 │
 └── data/
     └── enthalpy_data.xlsx
+```
 
 ---
 
@@ -58,6 +60,29 @@ Ejecutar el programa:
 python main.py
 ```
 
+Ejemplo de input:
+
+```text
+Fuel: CH4
+Air excess (0.10 = 10%): 0.10
+Ambient temperature [K]: 298
+```
+
+Ejemplo de output:
+
+```text
+REACTANTS
+CH4: 1.0000
+O2: 2.2000
+N2: 8.2720
+
+PRODUCTS
+CO2: 1.0000
+H2O: 2.0000
+N2: 8.2720
+
+Adiabatic Flame Temperature = XXXX.XX K
+```
 ---
 
 ## Fundamento de ingeniería
@@ -66,16 +91,42 @@ Para un combustible genérico CxHyOz:
 
 Requerimiento de oxígeno:
 
+```text
 O2,stoich = x + y/4 - z/2
+```
 
 Productos principales:
 
+```text
 CO2, H2O, N2
+```
 
 Supuestos del modelo:
 - Combustión completa  
 - Sin disociación química  
 - Sin pérdidas de calor  
+
+---
+
+## Fuentes de combustibles disponibles
+
+El proyecto incluye:
+
+| Combustible | Nombre | Fórmula |
+|---|---|---|
+| CH4 | Metano | CH₄ |
+| C3H8 | Propano | C₃H₈ |
+| H2 | Hidrógeno | H₂ |
+
+---
+
+## Requisitos
+
+Instalar dependencias:
+
+```bash
+pip install pandas numpy openpyxl
+```
 
 ---
 
