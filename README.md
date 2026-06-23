@@ -160,6 +160,8 @@ Este proyecto está publicado bajo licencia MIT para uso educativo e ingenieril.
 
 Desarrollado por **André Ballarta Elguera**.
 
+---
+
 # CombustionLab (README in English)
 
 **CombustionLab** is a Python-based combustion calculation tool designed to estimate the adiabatic flame temperature of simple fuels using stoichiometric combustion, excess air and tabulated thermodynamic data.
